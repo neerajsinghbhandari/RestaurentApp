@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Haldiram",
+      "email": "haldi@test",
+      "phone": "2234",
+      "address": "Delhi INDIA",
+      "services": "Namkeen, Snaks"
+    },
+    {
+      "id": 3,
+      "name": "Bikano",
+      "email": "bik@test",
+      "phone": "8899777",
+      "address": "Chandani Chawk",
+      "services": "Namkeen, Biscuit"
+    },
+    {
+      "id": 4,
+      "name": "Parley",
+      "email": "parlG@test",
+      "phone": "998777",
+      "address": "Rudrapur, Uttarakhand",
+      "services": "Biscuit for Tea"
+    },
+    {
+      "id": 5,
+      "name": "Somani",
+      "email": "som@test",
+      "phone": "",
+      "address": "Uchapul",
+      "services": "Tiles"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

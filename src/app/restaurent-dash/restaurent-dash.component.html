@@ -1,0 +1,103 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2 id="headingID">Restaurent Record App</h2>
+        <div class="d-flex">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                Restaurent</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="p-5 shadow-6 bg-light rounded-3">
+    <h1 class="display-5 fw-bold">Restaurent Management System</h1>
+    <h2 class="display-9">Hello world!</h2>
+    <p class="col-sm-8 fs-4">
+        Here we have the details of top rated Restaurent over India with Contact Info as well.
+    </p>
+    <a type="button" class="btn btn-primary" target="_blank" href="https://www.facebook.com/">
+        Test@FB
+    </a>
+</div>
+<!-- Jumbotron -->
+
+<!-- Table Display -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">RestaurentId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone No.</th>
+            <th scope="col">Address</th>
+            <th scope="col">Services</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let data of allRestaurentData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.address}}r</td>
+            <td>{{data.services}}</td>
+            <td>
+                <button class="btn btn-info">Edit</button>&nbsp;
+                <button class="btn btn-danger" (click)="deleteResto(data)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Restaurent</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" formControlName="name" class="form-control"
+                            placeholder="Enter Restaurent Name" id="name">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter Restaurent Email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="pno" class="form-label">Phone No.</label>
+                        <input type="phone" formControlName="phone" class="form-control" id="pno"
+                            placeholder="Enter Restaurent Contact Number">
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" formControlName="address" class="form-control" id="address"
+                            placeholder="Enter Restaurent Address">
+                    </div>
+                    <div class="mb-4">
+                        <label for="service" class="form-label">Services</label>
+                        <input type="text" formControlName="services" class="form-control" id="service"
+                            placeholder="Enter Restaurent Services Like Chai, Coffee, Sutta, ...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" (click)="addResto()">Add Details</button>
+            </div>
+        </div>
+    </div>
+</div>
