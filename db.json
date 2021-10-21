@@ -23,23 +23,9 @@
       "phone": "998777",
       "address": "Rudrapur, Uttarakhand",
       "services": "Biscuit for Tea"
-    },
-    {
-      "id": 5,
-      "name": "Somani",
-      "email": "som@test",
-      "phone": "",
-      "address": "Uchapul",
-      "services": "Tiles"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

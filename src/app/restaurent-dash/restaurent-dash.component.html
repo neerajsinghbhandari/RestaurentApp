@@ -44,7 +44,8 @@
             <td>{{data.address}}r</td>
             <td>{{data.services}}</td>
             <td>
-                <button class="btn btn-info">Edit</button>&nbsp;
+                <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="onEditResto(data)">Edit</button>&nbsp;
                 <button class="btn btn-danger" (click)="deleteResto(data)">Delete</button>
             </td>
         </tr>
@@ -57,7 +58,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Restaurent</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Restaurent Record Form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <!-- <span aria-hidden="true">&times;</span> -->
                 </button>
@@ -95,8 +96,9 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" (click)="addResto()">Add Details</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Clear</button>
+                <button type="button" class="btn btn-success" (click)="addResto()">Save Record</button>
+                <button type="button" class="btn btn-primary" (click)="updateResto()"></button>
             </div>
         </div>
     </div>
